@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>In City Experience | Partner Experience Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --bg: #f5f1e9;
+            --ink: #1e242b;
+            --muted: #5d6673;
+            --brand: #0f5b67;
+            --card: #ffffff;
+            --line: #d8d1c5;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Plus Jakarta Sans", sans-serif;
+            color: var(--ink);
+            background: linear-gradient(180deg, #f7f3ec 0%, var(--bg) 100%);
+            line-height: 1.5;
+        }
+
+        .wrap {
+            width: min(1100px, 93vw);
+            margin: 0 auto;
+            padding: 2.2rem 0 3rem;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Fraunces", serif;
+            margin: 0;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+        }
+
+        h2 {
+            font-size: clamp(1.4rem, 2.5vw, 2rem);
+            margin-top: 1.4rem;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .hero {
+            background: linear-gradient(140deg, #0c4f5c, #1b6a77);
+            color: #f4fafb;
+            border-radius: 20px;
+            padding: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            margin-top: 0.6rem;
+            max-width: 760px;
+        }
+
+        .meta {
+            margin-top: 0.85rem;
+            display: flex;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+        }
+
+        .pill {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            border-radius: 999px;
+            padding: 0.35rem 0.62rem;
+            font-size: 0.82rem;
+            font-weight: 700;
+        }
+
+        .grid {
+            display: grid;
+            gap: 0.9rem;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            margin-top: 1rem;
+        }
+
+        .menu-item {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 15px;
+            padding: 0.9rem;
+            box-shadow: 0 10px 24px rgba(12, 28, 45, 0.06);
+        }
+
+        .price {
+            font-size: 0.95rem;
+            color: var(--brand);
+            font-weight: 700;
+            margin-top: 0.35rem;
+        }
+
+        .details {
+            margin-top: 0.65rem;
+            padding-left: 1rem;
+            color: var(--muted);
+            font-size: 0.93rem;
+        }
+
+        .details li {
+            margin-bottom: 0.25rem;
+        }
+
+        .footer-note {
+            margin-top: 1.3rem;
+            color: var(--muted);
+            font-size: 0.93rem;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 0.9rem;
+        }
+
+        @media (max-width: 760px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media print {
+            body {
+                background: #fff;
+            }
+
+            .wrap {
+                width: 100%;
+                padding: 0;
+            }
+
+            .hero,
+            .menu-item,
+            .footer-note {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="wrap">
+        <section class="hero">
+            <h1>In City Experience: Partner Experience Menu</h1>
+            <p>Curated local experiences for boutique hotels, luxury apartment communities, and selected corporate
+                teams. Designed to improve experience value while reducing staff workload.</p>
+            <div class="meta">
+                <span class="pill">Version: Pilot Menu</span>
+                <span class="pill">Valid For Discovery Calls</span>
+                <span class="pill">Pricing Starts Listed Below</span>
+            </div>
+        </section>
+
+        <h2>Ready-To-Sell Packages</h2>
+        <div class="grid">
+            <article class="menu-item">
+                <h3>Rooftop Cocktail Night</h3>
+                <p class="price">Starting at $125 per person</p>
+                <ul class="details">
+                    <li>Who it is for: social guests, residents, VIP groups</li>
+                    <li>Group size: 10-60</li>
+                    <li>Includes: reserved venue, host, signature drink set, concierge flow</li>
+                    <li>Ideal customer: hotel guest groups, apartment residents</li>
+                </ul>
+            </article>
+
+            <article class="menu-item">
+                <h3>Local Food Crawl</h3>
+                <p class="price">Starting at $95 per person</p>
+                <ul class="details">
+                    <li>Who it is for: travelers, resident groups, teams</li>
+                    <li>Group size: 8-30</li>
+                    <li>Includes: multi-stop tasting route, guide, booking coordination</li>
+                    <li>Ideal customer: hotel concierge teams, coworking communities</li>
+                </ul>
+            </article>
+
+            <article class="menu-item">
+                <h3>Art Gallery + Wine Walk</h3>
+                <p class="price">Starting at $110 per person</p>
+                <ul class="details">
+                    <li>Who it is for: culture-focused guests and residents</li>
+                    <li>Group size: 10-40</li>
+                    <li>Includes: curated gallery route, tasting stops, host itinerary</li>
+                    <li>Ideal customer: boutique hotels, residential communities</li>
+                </ul>
+            </article>
+
+            <article class="menu-item">
+                <h3>Private Chef Dinner</h3>
+                <p class="price">Starting at $300 per person</p>
+                <ul class="details">
+                    <li>Who it is for: premium guest experiences and celebrations</li>
+                    <li>Group size: 4-20</li>
+                    <li>Includes: chef sourcing, custom menu, setup coordination</li>
+                    <li>Ideal customer: VIP hotel stays, executive groups</li>
+                </ul>
+            </article>
+
+            <article class="menu-item">
+                <h3>Wellness Morning</h3>
+                <p class="price">Starting at $85 per person</p>
+                <ul class="details">
+                    <li>Who it is for: wellness-minded teams, residents, guests</li>
+                    <li>Group size: 10-50</li>
+                    <li>Includes: instructor booking, yoga/fitness flow, healthy add-ons</li>
+                    <li>Ideal customer: apartments, coworking spaces, hotels</li>
+                </ul>
+            </article>
+
+            <article class="menu-item">
+                <h3>Executive Client Dinner</h3>
+                <p class="price">Starting at $220 per person</p>
+                <ul class="details">
+                    <li>Who it is for: client hosting and leadership groups</li>
+                    <li>Group size: 6-24</li>
+                    <li>Includes: venue curation, VIP table management, add-on upgrades</li>
+                    <li>Ideal customer: companies and hotel VIP teams</li>
+                </ul>
+            </article>
+
+            <article class="menu-item">
+                <h3>Date Night Package</h3>
+                <p class="price">Starting at $350 per couple</p>
+                <ul class="details">
+                    <li>Who it is for: couples, anniversary, proposal nights</li>
+                    <li>Group size: 1-12 couples</li>
+                    <li>Includes: dinner booking, add-on upgrades, itinerary support</li>
+                    <li>Ideal customer: hotels, luxury apartments</li>
+                </ul>
+            </article>
+
+            <article class="menu-item">
+                <h3>Family Weekend Package</h3>
+                <p class="price">Starting at $140 per person</p>
+                <ul class="details">
+                    <li>Who it is for: families visiting for weekend stays</li>
+                    <li>Group size: 3-40</li>
+                    <li>Includes: attractions route, family dining, transportation options</li>
+                    <li>Ideal customer: family-friendly hotels and communities</li>
+                </ul>
+            </article>
+
+            <article class="menu-item">
+                <h3>City Welcome Tour</h3>
+                <p class="price">Starting at $75 per person</p>
+                <ul class="details">
+                    <li>Who it is for: new residents, new hires, first-time visitors</li>
+                    <li>Group size: 8-50</li>
+                    <li>Includes: neighborhood orientation, local highlights, host support</li>
+                    <li>Ideal customer: apartments, student housing, HR teams</li>
+                </ul>
+            </article>
+
+            <article class="menu-item">
+                <h3>VIP Night Out</h3>
+                <p class="price">Starting at $250 per person</p>
+                <ul class="details">
+                    <li>Who it is for: celebrations and premium entertainment groups</li>
+                    <li>Group size: 6-30</li>
+                    <li>Includes: priority entry flow, venue stack, concierge touchpoints</li>
+                    <li>Ideal customer: hotels, executive hosts, resident VIP events</li>
+                </ul>
+            </article>
+        </div>
+
+        <p class="footer-note">
+            Notes: Pricing reflects starter-level package pricing and varies by city, season, partner rates, group size,
+            and service depth. Final quotes are provided after scope confirmation.
+        </p>
+    </main>
+</body>
+
+</html>
