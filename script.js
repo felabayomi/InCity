@@ -18,7 +18,7 @@ const form = document.querySelector('.contact-form');
 if (form) {
     form.addEventListener('submit', (event) => {
         event.preventDefault();
-        const leadEmail = 'felixdgreat@icloud.com';
+        const leadEmail = 'incityexperience@gmail.com';
         const data = new FormData(form);
 
         const fields = {
