@@ -61,7 +61,7 @@ if (form) {
         }
 
         setTimeout(() => {
-            button.textContent = 'Send Lead Request';
+            button.textContent = 'Request Pilot Plan';
             button.disabled = false;
         }, 1800);
     });
