@@ -14,6 +14,40 @@ revealItems.forEach((item, index) => {
     observer.observe(item);
 });
 
+const heroHeadline = document.querySelector('#hero-headline');
+const heroSubheadline = document.querySelector('#hero-subheadline');
+const heroPrimaryCta = document.querySelector('#hero-primary-cta');
+
+if (heroHeadline && heroSubheadline && heroPrimaryCta) {
+    const copyVariants = {
+        a: {
+            headline: 'Turn Boutique Hotel Stays Into Bookable City Experiences',
+            subheadline: 'Give guests premium local moments without adding planning load to your front desk or concierge team.',
+            cta: 'Request A Hotel Pilot Plan',
+        },
+        b: {
+            headline: 'Increase Guest Delight And Ancillary Revenue In One Move',
+            subheadline: 'We design and coordinate curated city experiences your boutique hotel can offer immediately.',
+            cta: 'Get My Property Pilot Plan',
+        },
+        c: {
+            headline: 'Your Guests Want More Than Recommendations',
+            subheadline: 'Launch signature city experiences that elevate stays while we handle sourcing, booking, and logistics.',
+            cta: 'Launch A 30-Day Pilot',
+        },
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const rawVariant = String(params.get('ab') || 'a').toLowerCase().trim();
+    const selectedVariant = copyVariants[rawVariant] ? rawVariant : 'a';
+    const selectedCopy = copyVariants[selectedVariant];
+
+    heroHeadline.textContent = selectedCopy.headline;
+    heroSubheadline.textContent = selectedCopy.subheadline;
+    heroPrimaryCta.textContent = selectedCopy.cta;
+    document.documentElement.setAttribute('data-hero-ab', selectedVariant);
+}
+
 const form = document.querySelector('.contact-form');
 if (form) {
     form.addEventListener('submit', (event) => {
